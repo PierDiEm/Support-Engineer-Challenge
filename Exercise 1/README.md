@@ -3,7 +3,7 @@
 
 ## Soluzione Base
 Nella prima risoluzione (base) ho creato uno script in Python che, prendendo tre parametri in input (due stringhe e una directory), attraversa ricorsivamente la directory e sostituisce, per tutti i file della `directory`, la `stringa1` con la `stringa2`.
-Il metodo os.walk(directory) attraversa in modo ricorsivo la directory e le sue sottodirectory, restituendo una tupla `(root, dirs, files)` per ogni directory incontrata. `root` è la directory corrente che viene attraversata, `dirs` è una lista di sottodirectory in root e `files` è una lista di file in root. Iteriamo sulla lista files e leggiamo il contenuto di ogni file usando `open(path, 'r')`. Sostituiamo quindi qualsiasi occorrenza di `stringa1` con `stringa2` usando il metodo `replace()` della classe `str` e scriviamo il contenuto modificato di nuovo nel file usando `open(path, 'w')`.
+Il metodo `os.walk(directory)` attraversa in modo ricorsivo la directory e le sue sottodirectory, restituendo una tupla `(root, dirs, files)` per ogni directory incontrata. `root` è la directory corrente che viene attraversata, `dirs` è una lista di sottodirectory in root e `files` è una lista di file in root. Iteriamo sulla lista files e leggiamo il contenuto di ogni file usando `open(path, 'r')`. Sostituiamo quindi qualsiasi occorrenza di `stringa1` con `stringa2` usando il metodo `replace()` della classe `str` e scriviamo il contenuto modificato di nuovo nel file usando `open(path, 'w')`.
 
 
 ## Soluzione con gestione errori
