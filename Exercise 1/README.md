@@ -1,4 +1,4 @@
-#Spiegazione Esercizio 1
+#  Spiegazione Esercizio 1
 
 
 ## Soluzione Base
