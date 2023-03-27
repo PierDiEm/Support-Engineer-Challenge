@@ -9,7 +9,7 @@ La stringa cron è composta da 5 campi separati da uno spazio e il loro signific
 - `*` (mese): specifica il mese in cui l'azione deve essere eseguita (in questo caso, `*` indica che l'azione deve essere eseguita ogni mese).
 - `0` (giorno della settimana): specifica il giorno della settimana in cui l'azione deve essere eseguita (in questo caso, `0` indica la domenica).
 
-## Azione eseqguita ogni Domenica
+## Azione eseguita ogni domenica
 L'azione eseguita ogni domenica notte è composta da due parti separate da &&:
 - La prima parte crea un file di backup compresso `backup.tar.gz` della cartella `/home/user` utilizzando il comando `tar`.
 - La seconda parte invia il file di backup al server remoto utilizzando il comando `ssh`. Il comando `mkdir -p /remote/backup/location` crea la directory di destinazione sul server remoto, se non esiste già. Successivamente, il comando `cat > /remote/backup/location/backup.tar.gz` riceve i dati del file di backup dalla pipe standard input (cioè il file `/home/user/backup.tar.gz`) e li scrive nel file `backup.tar.gz` nella directory di destinazione sul server remoto.
