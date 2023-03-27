@@ -8,7 +8,8 @@ Infine, si stampa il numero di file di script trovati nella directory specificat
 
 
 ##  Soluzione con gestione casi specifici
-Nella seconda risoluzione ho voluto aggiungere un controllo per verificare se il file è un file di testo, poiché la lettura di file binari può causare errori. Questo può essere fatto verificando se il tipo di file è `file` e se il tipo MIME del file è `text/*`.
-Ho scelto di utilizzare la libreria `glob` invece di `os.listdir()` per ottenere solo i file di script nella directory. Questo ci consente di specificare il pattern di ricerca dei nomi di file con l'interprete shebang e di evitare di dover iterare attraverso i file che non soddisfano il pattern.
-Ho utilizzato la funzione `subprocess.call()` per verificare se l'interprete specificato nell'interprete shebang esiste effettivamente nel sistema. In questo modo evitiamo di contare i file che hanno un'interprete shebang non valido o che fa riferimento a un interprete che non è installato nel sistema.
-Infine ho scelto di rendere lo script più modulare e riutilizzabile portando fuori il conteggio dei file di script in una funzione separata.
+Nella seconda risoluzione ho voluto:
+- Aggiungere un controllo per verificare se il file è un file di testo, poiché la lettura di file binari può causare errori. Questo può essere fatto verificando se il tipo di file è `file` e se il tipo MIME del file è `text/*`.
+- Ho scelto di utilizzare la libreria `glob` invece di `os.listdir()` per ottenere solo i file di script nella directory. Questo ci consente di specificare il pattern di ricerca dei nomi di file con l'interprete shebang e di evitare di dover iterare attraverso i file che non soddisfano il pattern.
+- Ho utilizzato la funzione `subprocess.call()` per verificare se l'interprete specificato nell'interprete shebang esiste effettivamente nel sistema. In questo modo evitiamo di contare i file che hanno un'interprete shebang non valido o che fa riferimento a un interprete che non è installato nel sistema.
+- Infine ho scelto di rendere lo script più modulare e riutilizzabile portando fuori il conteggio dei file di script in una funzione separata.
