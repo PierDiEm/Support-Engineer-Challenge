@@ -1,0 +1,11 @@
+import os
+
+def sostituisci_in_file(stringa1, stringa2, directory):
+    for root, dirs, files in os.walk(directory):
+        for file in files:
+            path = os.path.join(root, file)
+            with open(path, 'r') as f:
+                contenuto = f.read()
+            contenuto = contenuto.replace(stringa1, stringa2)
+            with open(path, 'w') as f:
+                f.write(contenuto)
