@@ -4,7 +4,8 @@ Il metodo os.walk(directory) attraversa in modo ricorsivo la directory e le sue 
 
 
 Nella seconda risoluzione (gestione errore) ho voluto implementare la risoluzione base con la gestione di alcuni errori che si potrebbero presentare:
-La directory non esiste o non è accessibile.La directory contiene link simbolici o file di sola lettura.
+La directory non esiste o non è accessibile.
+La directory contiene link simbolici o file di sola lettura.
 La prima stringa non viene trovata in un file.
 La seconda stringa viene usata per sostituire la prima stringa in modo errato, ad esempio se la seconda stringa è una sottostringa della prima stringa.
 
