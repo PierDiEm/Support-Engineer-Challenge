@@ -14,7 +14,7 @@ L'architettura della soluzione proposta prevede l'utilizzo di Terraform per la c
 ssh-keygen -t rsa -b 4096 -f ./deployer-key
 ```
 
-Aggiungere la chiave pubblica `deployer-key.pub` come chiave di accesso alla tua area di lavoro AWS.
+Aggiungere la chiave pubblica `deployer-key.pub` come chiave di accesso alla propria area di lavoro AWS.
 
 - Creare l'infrastruttura con Terraform: eseguire il comando Terraform per creare l'infrastruttura AWS necessaria, come l'istanza EC2, il gruppo di sicurezza, il bilanciamento del carico e il bucket S3.
 
