@@ -38,7 +38,7 @@ terraform apply
 
 Questo comando creerà tutte le risorse necessarie su AWS (VPC, subnet, security group, istanza EC2).
 
-- Configura l'istanza EC2: utilizzando Ansible, configura l'istanza EC2 appena creata installando e configurando Nginx e WordPress.
+- Configurare l'istanza EC2: utilizzando Ansible, configura l'istanza EC2 appena creata installando e configurando Nginx e WordPress.
 
 ```
 ansible-playbook -i hosts.yml playbook.yml
@@ -46,4 +46,4 @@ ansible-playbook -i hosts.yml playbook.yml
 
 - Accedere al sito WordPress
 
-Dopo aver completato la configurazione, puoi accedere al sito WordPress all'indirizzo IP pubblico dell'istanza EC2. Per connetterti al pannello di amministrazione di WordPress, vai su `http://<indirizzo_ip>/wp-admin` e accedi con le credenziali predefinite (`admin` come nome utente e `password` come password).
+Dopo aver completato la configurazione, si può accedere al sito WordPress all'indirizzo IP pubblico dell'istanza EC2. Per connettersi al pannello di amministrazione di WordPress, basterà andare su `http://<indirizzo_ip>/wp-admin` e accedere con le credenziali predefinite (`admin` come nome utente e `password` come password).
