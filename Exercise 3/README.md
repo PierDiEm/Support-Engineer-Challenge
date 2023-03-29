@@ -14,4 +14,4 @@ L'azione eseguita ogni domenica notte è composta da due parti separate da &&:
 - La prima parte crea un file di backup compresso `backup.tar.gz` della cartella `/home/user` utilizzando il comando `tar`.
 - La seconda parte invia il file di backup al server remoto utilizzando il comando `ssh`. Il comando `mkdir -p /remote/backup/location` crea la directory di destinazione sul server remoto, se non esiste già. Successivamente, il comando `cat > /remote/backup/location/backup.tar.gz` riceve i dati del file di backup dalla pipe standard input (cioè il file `/home/user/backup.tar.gz`) e li scrive nel file `backup.tar.gz` nella directory di destinazione sul server remoto.
 
-La stringa cron assume che la chiave pubblica sia stata installata correttamente sul server remoto per l'utente `user`. Inoltre, è possibile specificare opzioni aggiuntive per il comando `ssh`, come la porta remota, l'autenticazione tramite chiave privata e la compressione dei dati durante il trasferimento.
+La stringa cron assume che la chiave pubblica sia stata installata correttamente sul server remoto per l'utente `user`.
