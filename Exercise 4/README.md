@@ -1,6 +1,6 @@
 # Risoluzione esercizio 4
 
-L'architettura della soluzione proposta prevede l'utilizzo di Terraform per la creazione dell'infrastruttura su AWS e di Ansible per la configurazione dei server. L'applicazione WordPress verrà eseguita su un'istanza EC2 con un'immagine Amazon Linux 2 e Nginx come server web.
+L'architettura della soluzione proposta prevede l'utilizzo di Terraform per la creazione dell'infrastruttura su AWS e di Ansible (piattaforma di gestione della configurazione che consente di automatizzare le procedure di storage, server e networking) per la configurazione dei server. L'applicazione WordPress verrà eseguita su un'istanza EC2 con un'immagine Amazon Linux 2 e Nginx come server web.
 
 ## Requisiti
 - AWS account
@@ -8,7 +8,7 @@ L'architettura della soluzione proposta prevede l'utilizzo di Terraform per la c
 - Ansible
 
 ## Istruzioni
-- Configurare le variabili di ambiente: impostare le variabili di ambiente necessarie per il progetto, come l'accesso alle chiavi AWS e il nome del bucket S3.
+- Configurare le variabili di ambiente: impostare le variabili di ambiente necessarie per il progetto, come l'accesso alle chiavi AWS e il nome del bucket S3 (container per gli oggetti archiviati in Amazon S3).
 
 ```
 ssh-keygen -t rsa -b 4096 -f ./deployer-key
@@ -27,7 +27,7 @@ ami = "ami-0c55b159cbfafe1f0"
 wordpress_version = "latest"
 ```
 
-Nei campi `your_aws_access_key`, `your_aws_secret_key`, `your_aws_region` bisogna inserire le proprie credenziali AWS e la regione in cui si vuole creare l'infrastruttura. Si puo scegliere l'immagine AMI che preferisci, assicurandoti che sia compatibile con l'istanza EC2 selezionata.
+Nei campi `your_aws_access_key`, `your_aws_secret_key`, `your_aws_region` bisogna inserire le proprie credenziali AWS e la regione in cui si vuole creare l'infrastruttura. Si puo scegliere l'immagine AMI che si preferisce, assicurandosi che sia compatibile con l'istanza EC2 scelta.
 
 - Creare l'infrastruttura con Terraform: eseguire il comando Terraform per creare l'infrastruttura AWS necessaria, come l'istanza EC2, il gruppo di sicurezza, il bilanciamento del carico e il bucket S3.
 
